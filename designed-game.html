@@ -7,13 +7,14 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>DESIGNED-ROCK-PAPER-SCISSORS-GAME</title>
 </head>
- <link rel="stylesheet" href="/Designed-game.css">
+<link rel="stylesheet" href="/Designed-game.css">
+
 <body class="body-flex">
-   <h2>ROCK-PAPER-SCISSORS-GAME</h2>
-   
-   <button onclick="playGame('rock');" class="icon"> 
+   <h2 class="head">ROCK-PAPER-SCISSORS-GAME</h2>
+
+   <button onclick="playGame('rock');" class="icon">
       <img src="/moves pics/rock-emoji.png" alt="rock" class="move-icon"></button>
-   
+
    <button onclick="playGame('paper');" class="icon">
       <img src="/moves pics/paper-emoji.png" alt="paper" class="move-icon"></button>
 
@@ -21,19 +22,23 @@
       <img src="/moves pics/scissors-emoji.png" alt="scissors" class="move-icon"></button>
 
    <p class="js-result result"></p>
-   
-   <p class="js-moves"></p>
 
-   <p class="result-update"></p>
+   <p class="js-moves moves-style"></p>
 
-   <button onclick="
-   scores.wins=0;
-   scores.losses=0;
-   scores.Ties=0;
-   localStorage.removeItem('scores');
-   pageScore();
-   alert(`scores reseted back to 0.\nwins:${scores.wins} losses:${scores.losses} Ties:${scores.Ties}`)"
-   class="reset">RESET SCORE</button>
+   <p class="result-update update-style"></p>
+
+   <div class="btn-container">
+
+      <button onclick="
+      scores.wins=0;
+      scores.losses=0;
+      scores.Ties=0;
+      localStorage.removeItem('scores');
+      pageScore();
+      alert(`scores reseted back to 0.\nwins:${scores.wins} losses:${scores.losses} Ties:${scores.Ties}`)"
+         class="reset reset-update">RESET SCORE</button>
+   </div>
 </body>
 <script src="/Designed-game.js"></script>
+
 </html>
